@@ -38,12 +38,7 @@
     ]
   },
   "engines": {
-<<<<<<< HEAD
   "node": "18.x",
 }
-=======
-    "node": "18.x",
-    "bun": "1.x"
-  }
->>>>>>> a04ad874 (Añadido .gitignore y limpiados archivos innecesarios)
+
 }
