@@ -1,0 +1,117 @@
+/* Fondo oscuro del modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto; /* Permite desplazarse si el contenido es muy largo */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 85%; /* Ocupa el 85% del ancho de la pantalla */
+    max-height: 90vh; /* Altura máxima del modal (90% de la ventana) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+    overflow-y: auto; /* Barra de desplazamiento interna si el contenido es largo */
+}
+
+/* Grupo de campos del formulario */
+.form-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd; /* Borde para separar las secciones */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fondo claro para diferenciar las secciones */
+}
+
+.form-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 2px solid #ddd; /* Línea divisoria para cada sección */
+    padding-bottom: 5px;
+}
+
+/* Diseño de columnas para los campos */
+.form-group-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas responsivas */
+    gap: 15px; /* Espacio entre los campos */
+}
+
+.form-group {
+    margin-bottom: 0; /* Eliminamos el margen inferior ya que usamos 'gap' */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Botones de acción */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.save-btn,
+.close-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+
+.close-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.close-btn:hover {
+    background-color: #da190b;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
